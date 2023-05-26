@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="resources/style.css" type="text/css">
+    <script type="module" src="app.js"></script>
+</head>
+<body>
+    <section id="main">
+        <table class="tracker">
+            <thead>
+                <tr>
+                   <th>Date</th>
+                   <th>Description</th>
+                   <th>Income/Outgoing</th>
+                   <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody class="entry">
+                <tr>
+                    <td>
+                        <input class="input input-date" type="date">
+                    </td>
+                    <td>
+                        <input class="input input-description" type="text" placeholder="Please describe the income or expense">
+                    </td>
+                    <td>
+                        <select class="input input-type">
+                            <option value="income">Income</option>
+                            <option value="Outgoing">Outgoing</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" class="input input-amount">
+                    </td>
+                    <td>
+                        <button type="button" class="remove">&#128465;</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="add_entry">
+                        <button type="button" class="new">New Entry</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" class="summary">
+                        <p>Total:</p>
+                        <span class="total">£0.00</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>
